@@ -1,3 +1,7 @@
+let precio = parseInt (prompt("Por favor, ingrese el precio de su producto, se le agregara el I.V.A"));
+let cuotas = parseInt (prompt("Ingresa la cantidad de cuotas en la que desea pagar:3, 6 o 12"));
+
+dividir(precio, cuotas);
 function preguntas () {
     let precio = parseInt (prompt("Por favor, ingrese el precio de su producto"));
     let cuotas = parseInt (prompt("Ingresa la cantidad de cuotas en la que desea pagar:3, 6 o 12"));
@@ -15,8 +19,3 @@ function dividir (numeroUno, numeroDos){
         
     }
 }
-
-let precio = parseInt (prompt("Por favor, ingrese el precio de su producto, se le agregara el I.V.A"));
-let cuotas = parseInt (prompt("Ingresa la cantidad de cuotas en la que desea pagar:3, 6 o 12"));
-
-dividir(precio, cuotas);

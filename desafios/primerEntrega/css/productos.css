@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #ffffff; }
+    body h1, body .h1 {
+      color: #e27448;
+      font-family: "DynaPuff", cursive; }
+    body h4, body .h4 {
+      color: #e27448;
+      font-family: "DynaPuff", cursive; }
+  
+
+  /*HEADER AND FOOTER COLORS*/
+  .navbar, footer {
+    background-color: #0dd1a0; }
+
+  /*---------PRODUCTOS--------*/
+  .container {
+    padding: 20px; }
+  
+  .card {
+    background-color: white;
+    transition: all .2s ease-in-out; }
+  
+  .card:hover {
+    transform: scale(1.1); }
+ /*ASIDE*/
+.informacion {
+    text-align: center; }
+    .informacion div h1, .informacion div .h1 {
+      padding-top: 1rem; }
