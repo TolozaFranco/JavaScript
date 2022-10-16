@@ -1,0 +1,367 @@
+
+@import "variables";
+
+@import "../scss/components/buttoms";
+
+@import "../scss/layout/header";
+
+@import "./misc/normalize";
+
+@import "./misc/mixins";
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+
+
+
+
+
+body{
+    margin: 0;
+    box-sizing: border-box;
+    background-color: $background-color;
+    h1{
+        @include orange_tittle($accent-color, $font-tittle);
+    }
+    h4{
+        @include orange_tittle($accent-color, $font-tittle);
+    }
+}
+/*HEADER AND FOOTER COLORS*/
+.navbar, footer{
+    background-color: $primary-color;
+}
+/*-----------INDEX----------*/
+/*carousel*/
+.carousel-inner {
+    max-height: 700px;
+    .carousel-caption{
+        top: 40%;
+    }
+    img {
+    width: 100%;
+    max-height: 900px;}
+}
+/*main-area de navegacion*/
+.navegacion_area{  
+    max-width: 70%;
+.box{
+    @include violet_text($light-color, $secondary-color, $padding-text);
+    img{
+        max-height: 200px;
+        float: left;
+        padding-right: 20px;
+    }
+    p{
+        font-size: 20px;
+        padding-top: 50px;
+        
+    }
+   
+}
+}
+/*INDEX ASIDE*/
+.informacion{
+    text-align: center;
+    div{
+        h1{
+            padding-top: 1rem;
+        }
+    }
+}
+
+/*---------PRODUCTOS--------*/
+
+.container{
+    padding: 20px;
+  
+}
+.card{
+    background-color: white;
+    transition: all .2s ease-in-out;
+}
+.card:hover{
+    transform: scale(1.1);
+}
+/*---------VETERINARIA--------*/
+.banner{
+    background-image: url(../Images/items/banner_veterinaria.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 25em;
+    position: relative;
+    div{
+        h1{
+            color: $light-color;
+        }
+        max-height: 15em;
+        max-width: 600px;
+        border-radius: 10px;
+        position: absolute;
+        top: 20%;
+        right: 10%;
+    
+        @include violet_text($light-color, $secondary-color, $padding-text)
+        
+    }
+}
+.Banner_Ofrecemos{
+    max-width: 95%;
+    max-height: auto;
+    @include violet_text($light-color, $secondary-color, $padding-text);
+     h4{
+        color:$light-color;       
+    }
+}
+.sector_preguntas{
+    max-width: 95%;
+}
+/*---------NOSOTROS--------*/
+main{
+    #presentacion{
+        h1{
+            @include orange_tittle($accent-color, $font-tittle)
+        }
+        h3{
+            @include orange_tittle($accent-color, $font-tittle)
+        }
+        p{  border-radius: 10px;
+            max-width: 70%;
+            @include violet_text($light-color, $secondary-color, $padding-text)
+         
+        }
+    }
+}
+/*--------CONTACTO-------*/
+.CajaContacto{
+    background-color: $primary-color ;
+    color: $light-color;
+    input{
+        color: steelgray;
+        background-color: rgb(199, 250, 220);
+    }
+}
+
+/*media queries*/
+@media screen and (max-width:480px){
+    /*-----------INDEX----------*/
+.carousel-inner {
+        max-height: 700px;
+        .carousel-caption{
+            display: block;
+            top: 30%;
+        }
+        img {
+        width: 100%;
+        max-height: 900px;}
+    }
+/*area de navegacion*/
+    .navegacion_area{  
+        max-width: 100%;
+    .box{
+
+        @include violet_text($light-color, $secondary-color, $padding-text);
+        img{
+            max-height: 200px;
+            float: none;
+            padding-right: 20px;
+        }
+        p{
+            font-size: 20px;
+            padding-top: 10px;
+
+        }
+       
+    }
+    }
+
+    /*---------VETERINARIA--------*/
+.banner{
+    background-image: url(../Images/banner_veterinaria.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 25em;
+    position: relative;
+    div{
+        h1{
+            color: $light-color;
+        }
+        max-height: 20em;
+        max-width: 600px;
+        border-radius: 10px;
+        position: absolute;
+        top: 20%;
+        width: auto;
+        margin-left: 40px;
+    
+        @include violet_text($light-color, $secondary-color, $padding-text)
+        
+    }
+}
+.Banner_Ofrecemos{
+    max-width: 95%;
+    max-height: auto;
+    @include violet_text($light-color, $secondary-color, $padding-text);
+     h4{
+        color:$light-color;       
+    }
+}
+.sector_preguntas{
+    max-width: 95%;
+}
+/*NOSOTROS*/
+main{
+    .row{
+        justify-items: center;
+
+    
+    #presentacion{
+        h1{
+            @include orange_tittle($accent-color, $font-tittle)
+        }
+        h3{
+            @include orange_tittle($accent-color, $font-tittle)
+        }
+        p{  border-radius: 10px;
+            max-width: 100%;
+            @include violet_text($light-color, $secondary-color, $padding-text)
+         
+        }
+    }
+}
+}
+}
+
+@media screen and (max-width:575px){
+    /*PRODUCTOS*/
+    #items{
+        margin: 0;
+        padding: 0;
+    }
+
+}
+
+@media only screen and (min-width: 481px) and (max-width: 767px){
+    /*------INDEX-------*/
+    /*navegacion area*/
+    .navegacion_area{  
+        max-width: 70%;
+    .box{
+        @include violet_text($light-color, $secondary-color, $padding-text);
+        img{
+            max-height: 200px;
+            float: none;
+            padding-right: 20px;
+        }
+        p{
+            padding-top: 10px;
+        }
+       }
+     }
+/*----Veterinaria-----*/
+/*banner*/
+.banner{
+    background-image: url(../Images/banner_veterinaria.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 25em;
+    position: relative;
+    div{
+        h1{
+            color: $light-color;
+        }
+        max-height: 20em;
+        max-width: 600px;
+        border-radius: 10px;
+        position: absolute;
+        top: 20%;
+        width: auto;
+        margin-left: 40px;
+        
+    }
+
+}
+/*NOSOTROS*/
+main {
+    #FotoLucy{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #presentacion{
+        h1{
+            @include orange_tittle($accent-color, $font-tittle)
+        }
+        h3{
+            @include orange_tittle($accent-color, $font-tittle)
+        }
+        p{  border-radius: 10px;
+            max-width: 100%;
+            @include violet_text($light-color, $secondary-color, $padding-text)
+         
+        }
+    }
+}
+}
+@media only screen and (min-width: 767px) and (max-width: 1087px){
+        /*------INDEX-------*/
+    /*navegacion area*/
+    .navegacion_area{  
+        max-width: 70%;
+    .box{
+        @include violet_text($light-color, $secondary-color, $padding-text);
+        img{
+            max-height: 200px;
+            float: none;
+            padding-right: 20px;
+        }
+        p{
+            padding-top: 10px;
+        }
+       }
+     }
+
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px){
+            /*------INDEX-------*/
+    /*navegacion area*/
+    .navegacion_area{  
+        max-width: 70%;
+    .box{
+        @include violet_text($light-color, $secondary-color, $padding-text);
+        img{
+            max-height: 200px;
+            padding-right: 20px;
+        }
+        p{
+            padding-top: 10px;
+        }
+       }
+     }
+/*-----Nosotros-----*/
+/*presentacion*/
+main {
+    .row{
+        align-items: center;
+
+    #presentacion{
+    h1{
+        @include orange_tittle($accent-color, $font-tittle)
+    }
+    h3{
+        @include orange_tittle($accent-color, $font-tittle)
+    }
+    p{  border-radius: 10px;
+        max-width: 90%;
+        @include violet_text($light-color, $secondary-color, $padding-text)
+
+     
+    }
+}
+}
+}
+}
